@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #quiz-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#options label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#feedback {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="question">Question 1: You receive an email claiming you've won a prize. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Click on the link provided and enter your personal information.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Ignore the email and delete it immediately.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Reply to the email and confirm your identity.</label><br>
+        </div>
+        <button id="submit-btn">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 2: You get a message from someone you don't know, asking for your address and phone number because they say they want to send you a surprise gift. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Give them your address and phone number.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Ignore the message and tell an adult you trust about it.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Reply to the message with your information.</label><br>
+        </div>
+        <button id="submit-btn2">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 3: You see a website offering free games, but before you can play, it asks for your email and password. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Enter your email and password to play the games.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Ask a grown-up if it's safe before giving any information.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Enter fake information to access the games.</label><br>
+        </div>
+        <button id="submit-btn3">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 4: Someone you don't know sends you a friend request on a game you play online. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Accept the friend request and start chatting with them.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Check with a trusted adult before accepting any friend requests from people you don't know.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Accept the friend request but don't talk to them.</label><br>
+        </div>
+        <button id="submit-btn4">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 5: You get an email saying you've won a lot of money in a contest you never entered. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Click on the link provided and enter your personal information.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Ignore the email and delete it immediately.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Reply to the email and confirm your identity.</label><br>
+        </div>
+        <button id="submit-btn5">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 6: You're playing a game online, and someone you don't know asks you for personal information like your name and where you live. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Tell them your information so you can be friends.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Tell them you don't share personal information online and stop talking to them.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Give them fake information to keep them happy.</label><br>
+        </div>
+        <button id="submit-btn6">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 7: You receive a text message saying you need to pay money to unlock a special feature in a game you play. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Pay the money to unlock the feature.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Ask a grown-up if it's okay before making any payments in games.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Ignore the message and keep playing the game.</label><br>
+        </div>
+        <button id="submit-btn7">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 8: You're watching videos online, and a pop-up message says your computer has a virus and you need to click a link to fix it. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Click on the link to fix the virus.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Close the pop-up and ask an adult to check your computer.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Share the message with your friends to warn them about the virus.</label><br>
+        </div>
+        <button id="submit-btn8">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 9: You get an email from someone you know asking for your password because they say they need to log into your account. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Give them your password so they can log in.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Ask a grown-up if it's okay before making any payments in games.Check with the person using another way to make sure they really need it.</label><br>
+          <label><input type="radio" name="answer" value="C">C) Ignore the email and change your password.</label><br>
+        </div>
+        <button id="submit-btn9">Submit Answer</button>
+        <div id="feedback"></div>
+
+        <div id="question">Question 10: A website you visit asks for your birthday and where you go to school before you can sign up for an account. What should you do?</div>
+        <div id="options">
+          <label><input type="radio" name="answer" value="A">A) Enter your birthday and school information so you can use the website.</label><br>
+          <label><input type="radio" name="answer" value="B">B) Ask a grown-up if it's safe before giving any personal information.</label><br>
+          <label><input type="radio" name="answer" value="C">C)  Make up fake information to use on the website.</label><br>
+        </div>
+        <button id="submit-btn10">Submit Answer</button>
+        <div id="feedback"></div>
+      </div>
+      
+      <script>
+//     document.getElementById('submit-btn1').addEventListener('click', function() {
+//   var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+//   if (selectedAnswer) {
+//     var answerValue = selectedAnswer.value;
+//     if (answerValue === 'B') {
+//       document.getElementById('feedback').textContent = 'Correct! Ignoring suspicious emails is the safest action.';
+//     } else {
+//       document.getElementById('feedback').textContent = 'Incorrect. Be careful with suspicious emails.';
+//     }
+//   } else {
+//     document.getElementById('feedback').textContent = 'Please select an answer.';
+//   }
+// });
+// document.getElementById('submit-btn2').addEventListener('click', function() {
+//   var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+//   if (selectedAnswer) {
+//     var answerValue = selectedAnswer.value;
+//     if (answerValue === 'B') {
+//       document.getElementById('feedback').textContent = 'Correct! Ignoring suspicious emails is the safest action.';
+//     } else {
+//       document.getElementById('feedback').textContent = 'Incorrect. Be careful with suspicious emails.';
+//     }
+//   } else {
+//     document.getElementById('feedback').textContent = 'Please select an answer.';
+//   }
+// });
+// document.getElementById('submit-btn3').addEventListener('click', function() {
+//   var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+//   if (selectedAnswer) {
+//     var answerValue = selectedAnswer.value;
+//     if (answerValue === 'B') {
+//       document.getElementById('feedback').textContent = 'Correct! Ignoring suspicious emails is the safest action.';
+//     } else {
+//       document.getElementById('feedback').textContent = 'Incorrect. Be careful with suspicious emails.';
+//     }
+//   } else {
+//     document.getElementById('feedback').textContent = 'Please select an answer.';
+//   }
+// });
+
+
+var submitButtons = document.querySelectorAll('.submit-btn');
+
+// Attach event listener to all submit buttons
+submitButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var container = button.parentElement;
+        var selectedAnswer = container.querySelector('input[name^="answer"]:checked');
+        var feedback = container.querySelector('.feedback');
+
+        if (selectedAnswer) {
+            var answerValue = selectedAnswer.value;
+            if (answerValue === 'B') {
+                feedback.textContent = 'Correct! Ignoring suspicious emails is the safest action.';
+            } else {
+                feedback.textContent = 'Incorrect. Be careful with suspicious emails.';
+            }
+        } else {
+            feedback.textContent = 'Please select an answer.';
+        }
+    });
+});
+      </script>
+</body>
+</html>

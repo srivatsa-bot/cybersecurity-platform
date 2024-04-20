@@ -1,0 +1,71 @@
+
+body{
+    margin-top: 0px;
+    background-color: aqua;
+    background-image: url("images/rm373batch4-15.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+    
+}
+
+.forms{
+    /* border: 3px solid rgb(85, 11, 11); */
+    width: 30%;
+    text-align: center;
+    float: right;
+    padding: 20px;
+    padding-top: 300px;
+    background-color: rgba(0, 0, 0, 0.556);
+    /* background-blend-mode: multiply; */
+    height: 800px;
+    color: rgb(24, 66, 217);
+
+}
+.forms h1{
+    font-size: 40px;
+    color: red;
+    margin-bottom: 40px;
+    margin-top: 7px;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+.input-field{
+    padding: 10px;
+    text-align: center;
+    /* max-height: 80px;
+    transition: max-height 0.5s;
+    overflow: hidden; */
+}
+.input-field input{
+    border-radius: 4px;
+    border: 0px;
+    background-color: rgb(184, 222, 255);
+    padding: 16px;
+    font-size: 16px;
+}
+.input-field i{
+    margin-right: 5px;
+}
+.forms a,p{
+    text-decoration: none;
+    margin-right: 45px;
+}
+a:hover{
+    color: crimson;
+}
+.button input{
+    background-color: blueviolet;
+    color: white;
+    font-size: 22PX;
+    border-radius: 20px;
+    border: 0px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+  
+}
+.button input.disable{
+    background-color: rgb(200, 218, 234);
+    color: black;
+}

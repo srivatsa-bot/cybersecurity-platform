@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="proj1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Sue+Ellen+Francisco&display=swap">
+    <style>
+        h1,h2,p, a {
+            font-family: "Amaranth", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <!-- <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li> -->
+            <li><a href="login.html">LOGIN</a></li>
+
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars" loading="lazy">
+        <img src="moon.png" id="moon" loading="lazy">
+        <img src="mountains_behind.png" id="mountains_behind" loading="lazy">
+        <h2 id="text">They are always watching</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front1.png" id="mountains_front" loading="lazy">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Cybersecurity:</h2>
+        <p>
+            Cybersecurity is like a superhero that protects all the cool stuff we do on computers, tablets, and phones. Just like how superheroes keep bad guys away from our homes and cities, cybersecurity keeps away digital bad guys called hackers, who try to sneak into our devices and steal our secrets or cause trouble. It's like having a shield around our online world to keep it safe and fun!
+        </p>
+        <h2>Data Safety:</h2>
+        <p>
+            Data safety is like a special lock and key for our digital secrets, like our favorite games, pictures, and messages. Just as we keep our secret hideouts safe from intruders, data safety helps keep our digital secrets safe from the bad guys on the internet. It's like having a magical spell that makes sure only our trusted friends can see and use our special stuff, while keeping it away from anyone who shouldn't.        </p>
+        <h2>In simple words, cybersecurity and data safety are like having superheroes and magical spells to protect our online adventures and keep our digital treasures safe from sneaky villains!</h2>    
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 0.75+ 'px';
+            mountains_behind.style.top = value * 0.25 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            btn.style.marginRight = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+    </script>
+</body>
+</html>

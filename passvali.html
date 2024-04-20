@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload='document.form1.text1.focus()'>
+    <div class="password">
+        <h2>Enter password to check strength</h2>
+        <form name="form1" action="#"> 
+            <input type='text' name='text1' id="passwordInput"/>
+            <input type="submit" name="submit" value="Submit" onclick="return ValidatePassword(document.form1.text1)"/>
+        </form>
+    </div>
+    <script>
+        function ValidatePassword(inputText) {
+            var length = /^.{8,}$/; 
+            var lower = /[a-z]/; 
+            var upper = /[A-Z]/; 
+            var special = /[\W_]/; 
+
+            var inputField = document.getElementById("passwordInput");            
+            if (inputText.value.match(length) && inputText.value.match(lower) && inputText.value.match(upper) && inputText.value.match(special)) {
+                inputField.style.backgroundColor = "Green"; 
+            } else if (inputText.value.match(length) && inputText.value.match(lower) && inputText.value.match(upper)) {
+                inputField.style.backgroundColor = "Blue";
+            } else if (inputText.value.match(length) && inputText.value.match(lower)) {
+                inputField.style.backgroundColor = "Yellow";
+            } else if (!inputText.value.match(length)) {
+                inputField.style.backgroundColor = "Red"; 
+            }
+            
+            return false; 
+        }
+    </script>
+</body>
+</html>

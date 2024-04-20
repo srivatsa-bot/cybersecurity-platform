@@ -1,0 +1,187 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .inbox {
+        width: 400px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    .email {
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .sender {
+        font-weight: bold;
+    }
+    
+    .subject {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .content {
+        margin-left: 20px;
+    }
+    
+    .link {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    .feedback {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="inbox">
+        <div class="email">
+            <div class="sender">verify-account@aol-verification.com</div>
+            <div class="subject">Urgent: Account Verification Needed</div>
+            <div class="content">
+                <p>Please click the following link to verify your account: <a href="#" class="link">Verify Now</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="inbox">
+        <div class="email">
+            <div class="sender">verify-account@aol-verification.com</div>
+            <div class="subject">Urgent: Account Verification Needed</div>
+            <div class="content">
+                <p>Please click the following link to verify your account: <a href="#" class="link">Verify Now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback"></div>
+
+    <script>
+        document.querySelectorAll('.link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const feedback = document.querySelector('.feedback');
+        if (this.textContent === 'Verify Now') {
+            feedback.textContent = 'Success! Your account has been verified.';
+            feedback.style.color = 'green';
+        } else {
+            feedback.textContent = 'Warning! This may be a phishing attempt.';
+            feedback.style.color = 'red';
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .inbox {
+        width: 400px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    .email {
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .sender {
+        font-weight: bold;
+    }
+    
+    .subject {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .content {
+        margin-left: 20px;
+    }
+    
+    .link {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    .feedback {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="inbox">
+        <div class="email">
+            <div class="sender">verify-account@aol-verification.com</div>
+            <div class="subject">Urgent: Account Verification Needed</div>
+            <div class="content">
+                <p>Please click the following link to verify your account: <a href="#" class="link">Verify Now</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="inbox">
+        <div class="email">
+            <div class="sender">Notaphisher@gmail.com</div>
+            <div class="subject">Urgent: Account Verification Needed</div>
+            <div class="content">
+                <p>Please click the following link to verify your account: <a href="#" class="link">Verify Now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback"></div>
+
+    <script>
+        document.querySelectorAll('.link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const feedback = document.querySelector('.feedback');
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        const senderEmail = this.closest('.email').querySelector('.sender').textContent.trim();
+        if (emailPattern.test(senderEmail)) {
+            if (this.textContent === emailPattern) {
+                feedback.textContent = 'Success! Your account has been verified.';
+                feedback.style.color = 'green';
+            } else {
+                feedback.textContent = 'Warning! This may be a phishing attempt.';
+                feedback.style.color = 'red';
+            }
+        } else {
+            feedback.textContent = 'Invalid email address format.';
+            feedback.style.color = 'red';
+        }
+    });
+});
+    </script>
+
+</body>
+</html>

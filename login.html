@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <link href="lab.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9f24f8720e.js" crossorigin="anonymous"></script> 
+        <!-- script from fontawesome.com -->
+    </head>
+    <body>
+        <div class="background">
+            <div class="forms">
+                <h1 id="title">sign up(parent)</h1>
+                <div class="inputs" id="login-form">
+                    <form id="form" onsubmit="return Validate()" action="content.html" method="post">
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="username" placeholder="username">
+                        </div>
+                        <div class="input-field" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" name="gmail" placeholder="gmail">
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" name="password" placeholder="password">
+                        </div>
+                        <p id="sup">are you child?<a href="#" id="sin" onclick="signIn()">click here</a></p>
+                        <div class="button">
+                            <input type="submit" value="sign up" id="signup">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function signIn() {
+                let title = document.getElementById("title");
+                let email = document.getElementById("email");
+                let sup = document.getElementById("sup");
+                let signup = document.getElementById("signup");
+                let form = document.getElementById("form");
+
+                title.textContent = "sign in(parent)"; // Change title to "sign in"
+                email.style.display = "none"; // Hide email form
+                sup.innerHTML = "are you a child? <a href='#' id='sup' onclick='signUp()'>click here</a>"; // Change message
+                signup.value = "sign in"; // Change submit button value
+                form.action = "contentp.html"; // Update form action for sign in
+            }
+
+            function signUp() {
+                let title = document.getElementById("title");
+                let email = document.getElementById("email");
+                let sup = document.getElementById("sup");
+                let signup = document.getElementById("signup");
+                let form = document.getElementById("form");
+
+                title.textContent = "sign in(child)"; // Change title to "sign up"
+                email.style.display = "block"; // Show email form
+                sup.innerHTML = "have an acc?<a href='#' id='sin' onclick='signIn()'>sign in</a>"; // Change message
+                signup.value = "sign up"; // Change submit button value
+                form.action = "contentc.html"; // Update form action for sign up
+            }
+
+            function Validate() {
+                let username1 = document.getElementsByName("username")[0].value;
+                let password1 = document.getElementsByName("password")[0].value;
+                if (username1 === "srivatsa" && password1 === "1234") {
+                    return true;
+                } else if (username1 === "tanvi" && password1 === "1234") {
+                    return true;
+                } else if (username1 === "pranavi" && password1 === "1234") {
+                    return true;
+                } else {
+                    alert("Invalid username or password");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
